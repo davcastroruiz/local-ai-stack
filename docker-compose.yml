@@ -1,0 +1,72 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - OLLAMA_CONTEXT_LENGTH=65536
+    volumes:
+      - ollama:/root/.ollama
+    ports:
+      - "11434:11434"
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    depends_on:
+      - ollama
+      - searxng
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    ports:
+      - "3000:8080"
+    volumes:
+      - webui:/app/backend/data
+
+  searxng:
+    image: searxng/searxng:latest
+    environment:
+      - SEARXNG_LIMITER=false
+    container_name: searxng
+    ports:
+      - "8080:8080"
+
+  comfyui:
+    image: mmartial/comfyui-nvidia-docker:ubuntu24_cuda13.0-latest
+    container_name: comfyui
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - USE_UV=true
+      - WANTED_UID=0
+      - WANTED_GID=0
+      - BASE_DIRECTORY=/basedir
+      - SECURITY_LEVEL=normal
+    volumes:
+      - D:/AI/run:/comfy/mnt
+      - D:/AI/data:/basedir
+    ports:
+      - "8188:8188"
+
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      - TZ=America/Mexico_City
+      # - N8N_HOST=hangnail-declared-dime.ngrok-free.dev
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=https
+      - N8N_SECURE_COOKIE=false
+      - WEBHOOK_URL=https://hangnail-declared-dime.ngrok-free.dev
+    volumes:
+      - ./n8n_data:/home/node/.n8n
+    networks:
+      - default
+
+volumes:
+  ollama:
+  webui:
