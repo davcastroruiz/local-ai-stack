@@ -66,7 +66,7 @@ Current development machine:
 Clone repository:
 
 ```bash
-git clone https://github.com/<username>/local-ai-stack.git
+git clone https://github.com/davcastroruiz/local-ai-stack.git
 cd local-ai-stack
 ```
 
