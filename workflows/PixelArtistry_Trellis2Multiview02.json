@@ -1,0 +1,2015 @@
+{
+  "id": "c3ad5b1f-fd53-4c01-b059-703af10dff30",
+  "revision": 0,
+  "last_node_id": 45,
+  "last_link_id": 72,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "RAMCleanup",
+      "pos": [
+        1629.4969156986554,
+        463.4442887092453
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_memory_cleanup",
+        "ver": "1.1.2",
+        "Node name for S&R": "RAMCleanup",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        true,
+        true,
+        true,
+        3
+      ]
+    },
+    {
+      "id": 9,
+      "type": "VRAMCleanup",
+      "pos": [
+        -68.84951881619304,
+        343.30806885877615
+      ],
+      "size": [
+        270.56057024724214,
+        83.1212636786878
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_memory_cleanup",
+        "ver": "1.1.2",
+        "Node name for S&R": "VRAMCleanup",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        true,
+        true
+      ]
+    },
+    {
+      "id": 10,
+      "type": "RAMCleanup",
+      "pos": [
+        -360.2317152716937,
+        339.003379075685
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_memory_cleanup",
+        "ver": "1.1.2",
+        "Node name for S&R": "RAMCleanup",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        true,
+        true,
+        true,
+        3
+      ]
+    },
+    {
+      "id": 14,
+      "type": "GeomPackMeshFix",
+      "pos": [
+        2422.2560080066796,
+        678.9694353425587
+      ],
+      "size": [
+        317.05859375,
+        278
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_mesh",
+          "type": "TRIMESH",
+          "link": 70
+        }
+      ],
+      "outputs": [
+        {
+          "name": "repaired_mesh",
+          "type": "TRIMESH",
+          "links": [
+            8
+          ]
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-geometrypack",
+        "ver": "b8104f2c23cf70218ef7f94a920345e66551d4ec",
+        "Node name for S&R": "GeomPackMeshFix",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "true",
+        "false",
+        "false",
+        0,
+        "false",
+        "true",
+        10,
+        3,
+        "false"
+      ]
+    },
+    {
+      "id": 19,
+      "type": "Preview3D",
+      "pos": [
+        -277.2136691604269,
+        542.7199272642438
+      ],
+      "size": [
+        1140.5975533040166,
+        1030.5192747190576
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "camera_info",
+          "shape": 7,
+          "type": "LOAD3D_CAMERA",
+          "link": null
+        },
+        {
+          "name": "bg_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model_file",
+          "type": "STRING,FILE_3D_GLB,FILE_3D_GLTF,FILE_3D_FBX,FILE_3D_OBJ,FILE_3D_STL,FILE_3D_USDZ,FILE_3D",
+          "widget": {
+            "name": "model_file"
+          },
+          "link": 19
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.7.0",
+        "Node name for S&R": "Preview3D",
+        "Last Time Model File": "C:/Users/phili/Documents/ComfyUI-Easy-Install/ComfyUI-Easy-Install/ComfyUI/output/3D/Trellis2_00012_.glb",
+        "Scene Config": {
+          "showGrid": true,
+          "backgroundColor": "#282828",
+          "backgroundImage": "",
+          "backgroundRenderMode": "tiled"
+        },
+        "Camera Config": {
+          "cameraType": "perspective",
+          "fov": 35,
+          "state": {
+            "position": {
+              "x": -1.682544927857382,
+              "y": 7.290868066495943,
+              "z": 10.035169886888218
+            },
+            "target": {
+              "x": 0,
+              "y": 2.411628219167603,
+              "z": 0
+            },
+            "zoom": 1,
+            "cameraType": "perspective"
+          }
+        },
+        "Light Config": {
+          "intensity": 1
+        },
+        "Model Config": {
+          "upDirection": "original",
+          "materialMode": "original",
+          "showSkeleton": false
+        },
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_file": true
+          },
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        },
+        "Resource Folder": "Users/phili/Documents/ComfyUI-Easy-Install/ComfyUI-Easy-Install/ComfyUI/output/3D"
+      },
+      "widgets_values": [
+        "C:/Users/phili/Documents/ComfyUI-Easy-Install/ComfyUI-Easy-Install/ComfyUI/output/3D/Trellis2_00012_.glb",
+        ""
+      ]
+    },
+    {
+      "id": 22,
+      "type": "Trellis2MeshWithVoxelToTrimesh",
+      "pos": [
+        -168.38967715156218,
+        379.08324394781494
+      ],
+      "size": [
+        289.41171875,
+        58
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mesh",
+          "type": "MESHWITHVOXEL",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "trimesh",
+          "type": "TRIMESH",
+          "links": [
+            22,
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "visualbruno/ComfyUI-Trellis2",
+        "ver": "2fd9df85fa1b758d6b9b89cb17ebd82b2e622f70",
+        "Node name for S&R": "Trellis2MeshWithVoxelToTrimesh",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "90 degrees"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "UltraShapeRefine",
+      "pos": [
+        1088.5082533895943,
+        144.47312614589777
+      ],
+      "size": [
+        282.615234375,
+        362
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ultrashape_model",
+          "type": "ULTRASHAPE_MODEL",
+          "link": 20
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 55
+        },
+        {
+          "name": "mesh",
+          "type": "TRIMESH",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "refined_mesh",
+          "type": "TRIMESH",
+          "links": [
+            2,
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "Rizzlord/ComfyUI-UltraShape",
+        "ver": "1b4c60ef7243d1985bd2b1993338361e608c1a67",
+        "Node name for S&R": "UltraShapeRefine",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        50,
+        5,
+        0.99,
+        768,
+        256,
+        8192,
+        2048,
+        931295141965107,
+        "fixed",
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "id": 3,
+      "type": "Trellis2ExportMesh",
+      "pos": [
+        1643.7316610274704,
+        220.9048634369009
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "trimesh",
+          "type": "TRIMESH",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "glb_path",
+          "type": "STRING",
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "relative_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "visualbruno/ComfyUI-Trellis2",
+        "ver": "ded89500f3ab9130907d9a688d485f0ee677e5e2",
+        "Node name for S&R": "Trellis2ExportMesh",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "3D/Trellis2",
+        "glb"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "Trellis2ExportMesh",
+      "pos": [
+        4061.2294416065392,
+        334.3266933551673
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "trimesh",
+          "type": "TRIMESH",
+          "link": 67
+        }
+      ],
+      "outputs": [
+        {
+          "name": "glb_path",
+          "type": "STRING",
+          "links": [
+            6
+          ]
+        },
+        {
+          "name": "relative_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "visualbruno/ComfyUI-Trellis2",
+        "ver": "20651320d20ed56a52168c1bd3f29d6886c4be06",
+        "Node name for S&R": "Trellis2ExportMesh",
+        "ue_properties": {
+          "version": "7.7",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "TexturedMesh",
+        "glb"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "Trellis2LoadImageWithTransparency",
+      "pos": [
+        -4197.552825311214,
+        133.1644877022163
+      ],
+      "size": [
+        361.3563155539461,
+        425.2161033292517
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            43
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": []
+        },
+        {
+          "name": "image_with_alpha",
+          "type": "IMAGE",
+          "links": [
+            55
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "visualbruno/ComfyUI-Trellis2",
+        "ver": "e7f9b30df7a09bcedf1c955e176754c73f983254",
+        "Node name for S&R": "Trellis2LoadImageWithTransparency",
+        "ue_properties": {
+          "version": "7.7",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "cee16455ab8ba1458ba7fb06ea1a566640743123bc52d361f660624f47823053.png",
+        "image"
+      ]
+    },
+    {
+      "id": 27,
+      "type": "Trellis2LoadImageWithTransparency",
+      "pos": [
+        -4209.288357022635,
+        649.2249822923496
+      ],
+      "size": [
+        380.38357154742897,
+        419.7796111577338
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            47
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": []
+        },
+        {
+          "name": "image_with_alpha",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "aux_id": "visualbruno/ComfyUI-Trellis2",
+        "ver": "e7f9b30df7a09bcedf1c955e176754c73f983254",
+        "Node name for S&R": "Trellis2LoadImageWithTransparency",
+        "ue_properties": {
+          "version": "7.7",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "16314e3e0f35e3c1e3f9e33e045f9eb802db0b274368ced03002adbf1f2892d2.png",
+        "image"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "Trellis2LoadImageWithTransparency",
+      "pos": [
+        -4211.977693872043,
+        1205.0359227503823
+      ],
+      "size": [
+        356.8223634296739,
+        432.32686143719934
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            51
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": []
+        },
+        {
+          "name": "image_with_alpha",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "aux_id": "visualbruno/ComfyUI-Trellis2",
+        "ver": "e7f9b30df7a09bcedf1c955e176754c73f983254",
+        "Node name for S&R": "Trellis2LoadImageWithTransparency",
+        "ue_properties": {
+          "version": "7.7",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "f5da14a3838a444b839c6a4b3eb1ac1b1b56e4805ab998a8b8b2d354a8b1ed68.png",
+        "image"
+      ]
+    },
+    {
+      "id": 38,
+      "type": "Trellis2PreProcessImage",
+      "pos": [
+        -3516.5281411480573,
+        257.69443911850504
+      ],
+      "size": [
+        281.7837890625,
+        82
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 43
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            44,
+            61
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "visualbruno/ComfyUI-Trellis2",
+        "ver": "c1ed55def8dcd8c07529d230b4af73b882d14d99",
+        "Node name for S&R": "Trellis2PreProcessImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        25,
+        true
+      ]
+    },
+    {
+      "id": 39,
+      "type": "Trellis2PreProcessImage",
+      "pos": [
+        -3523.2667546349835,
+        811.2530814401521
+      ],
+      "size": [
+        281.7837890625,
+        82
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 47
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            48,
+            62
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "visualbruno/ComfyUI-Trellis2",
+        "ver": "c1ed55def8dcd8c07529d230b4af73b882d14d99",
+        "Node name for S&R": "Trellis2PreProcessImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        25,
+        true
+      ]
+    },
+    {
+      "id": 40,
+      "type": "Trellis2PreProcessImage",
+      "pos": [
+        -3461.8218040533325,
+        1308.1085057240955
+      ],
+      "size": [
+        281.7837890625,
+        82
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 51
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            52,
+            63
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "visualbruno/ComfyUI-Trellis2",
+        "ver": "c1ed55def8dcd8c07529d230b4af73b882d14d99",
+        "Node name for S&R": "Trellis2PreProcessImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        25,
+        true
+      ]
+    },
+    {
+      "id": 8,
+      "type": "GeomPackMergeVertices",
+      "pos": [
+        2813.6281581706476,
+        825.6898042054554
+      ],
+      "size": [
+        270,
+        110
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mesh",
+          "type": "TRIMESH",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "merged_mesh",
+          "type": "TRIMESH",
+          "links": [
+            64
+          ]
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-geometrypack",
+        "ver": "b8104f2c23cf70218ef7f94a920345e66551d4ec",
+        "Node name for S&R": "GeomPackMergeVertices",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        0.00001,
+        "false"
+      ]
+    },
+    {
+      "id": 17,
+      "type": "VRAMCleanup",
+      "pos": [
+        1995.5079962930454,
+        402.6743871453712
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            69
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_memory_cleanup",
+        "ver": "1.1.2",
+        "Node name for S&R": "VRAMCleanup",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        true,
+        true
+      ]
+    },
+    {
+      "id": 1,
+      "type": "Preview3D",
+      "pos": [
+        1027.2250526973742,
+        569.1832627871597
+      ],
+      "size": [
+        1114.2488926038545,
+        1035.5806129712673
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "camera_info",
+          "shape": 7,
+          "type": "LOAD3D_CAMERA",
+          "link": null
+        },
+        {
+          "name": "bg_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model_file",
+          "type": "STRING,FILE_3D_GLB,FILE_3D_GLTF,FILE_3D_FBX,FILE_3D_OBJ,FILE_3D_STL,FILE_3D_USDZ,FILE_3D",
+          "widget": {
+            "name": "model_file"
+          },
+          "link": 1
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.8.0",
+        "Node name for S&R": "Preview3D",
+        "Last Time Model File": "C:/Users/phili/Documents/ComfyUI-Easy-Install/ComfyUI-Easy-Install/ComfyUI/output/3D/Trellis2_00013_.glb",
+        "Scene Config": {
+          "showGrid": true,
+          "backgroundColor": "#282828",
+          "backgroundImage": "",
+          "backgroundRenderMode": "tiled"
+        },
+        "Camera Config": {
+          "cameraType": "perspective",
+          "fov": 35,
+          "state": {
+            "position": {
+              "x": -5.202221623530434,
+              "y": 3.800400878880414,
+              "z": 7.464263770294901
+            },
+            "target": {
+              "x": 0,
+              "y": 2.424627729999194,
+              "z": 0
+            },
+            "zoom": 1,
+            "cameraType": "perspective"
+          }
+        },
+        "Light Config": {
+          "intensity": 3
+        },
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_file": true
+          },
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        },
+        "Resource Folder": "Users/phili/Documents/ComfyUI-Easy-Install/ComfyUI-Easy-Install/ComfyUI/output/3D"
+      },
+      "widgets_values": [
+        "C:/Users/phili/Documents/ComfyUI-Easy-Install/ComfyUI-Easy-Install/ComfyUI/output/3D/Trellis2_00013_.glb",
+        ""
+      ]
+    },
+    {
+      "id": 4,
+      "type": "PreviewImage",
+      "pos": [
+        3347.3637816307887,
+        883.857315863908
+      ],
+      "size": [
+        440.8959669350097,
+        712.0336924601169
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 71
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.7.0",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 25,
+      "type": "UltraShapeModelLoader",
+      "pos": [
+        470.64578157390935,
+        140.71925945435572
+      ],
+      "size": [
+        281.9140625,
+        82
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "ultrashape_model",
+          "type": "ULTRASHAPE_MODEL",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "Rizzlord/ComfyUI-UltraShape",
+        "ver": "1b4c60ef7243d1985bd2b1993338361e608c1a67",
+        "Node name for S&R": "UltraShapeModelLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "ultrashape_v1.pt",
+        true
+      ]
+    },
+    {
+      "id": 41,
+      "type": "Trellis2MeshTexturingMultiView",
+      "pos": [
+        3352.922253190877,
+        163.31366816939226
+      ],
+      "size": [
+        419.15234375,
+        566
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pipeline",
+          "type": "TRELLIS2PIPELINE",
+          "link": 58
+        },
+        {
+          "name": "front_image",
+          "type": "IMAGE",
+          "link": 61
+        },
+        {
+          "name": "trimesh",
+          "type": "TRIMESH",
+          "link": 64
+        },
+        {
+          "name": "back_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 63
+        },
+        {
+          "name": "left_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 62
+        },
+        {
+          "name": "right_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "trimesh",
+          "type": "TRIMESH",
+          "links": [
+            67
+          ]
+        },
+        {
+          "name": "base_color_texture",
+          "type": "IMAGE",
+          "links": [
+            71
+          ]
+        },
+        {
+          "name": "metallic_roughness_texture",
+          "type": "IMAGE",
+          "links": [
+            72
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "visualbruno/ComfyUI-Trellis2",
+        "ver": "c1ed55def8dcd8c07529d230b4af73b882d14d99",
+        "Node name for S&R": "Trellis2MeshTexturingMultiView",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        1897420919,
+        "randomize",
+        12,
+        3,
+        0.2,
+        3,
+        1024,
+        4096,
+        "OPAQUE",
+        false,
+        0,
+        0.9,
+        false,
+        false,
+        60,
+        "z",
+        1,
+        "euler"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "PreviewImage",
+      "pos": [
+        3838.5446990521104,
+        731.727939108927
+      ],
+      "size": [
+        510.15007049325686,
+        692.6121350555147
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 72
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.7.0",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 6,
+      "type": "Preview3D",
+      "pos": [
+        4401.257343313209,
+        225.96817144363803
+      ],
+      "size": [
+        1373.0607168871613,
+        1253.4004846256205
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "camera_info",
+          "shape": 7,
+          "type": "LOAD3D_CAMERA",
+          "link": null
+        },
+        {
+          "name": "bg_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model_file",
+          "type": "STRING,FILE_3D_GLB,FILE_3D_GLTF,FILE_3D_FBX,FILE_3D_OBJ,FILE_3D_STL,FILE_3D_USDZ,FILE_3D",
+          "widget": {
+            "name": "model_file"
+          },
+          "link": 6
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.7.0",
+        "Node name for S&R": "Preview3D",
+        "Camera Config": {
+          "cameraType": "perspective",
+          "fov": 75,
+          "state": {
+            "position": {
+              "x": -0.25098554326784267,
+              "y": 4.308179361138583,
+              "z": 4.5000537058106005
+            },
+            "target": {
+              "x": 0.26005113988895506,
+              "y": 2.8492265314725658,
+              "z": -0.20620442052597124
+            },
+            "zoom": 1,
+            "cameraType": "perspective"
+          }
+        },
+        "Last Time Model File": "C:/Users/phili/Documents/ComfyUI-Easy-Install/ComfyUI-Easy-Install/ComfyUI/output/TexturedMesh_00002_.glb",
+        "Scene Config": {
+          "showGrid": true,
+          "backgroundColor": "#282828",
+          "backgroundImage": "",
+          "backgroundRenderMode": "tiled"
+        },
+        "Light Config": {
+          "intensity": 3
+        },
+        "Model Config": {
+          "upDirection": "original",
+          "materialMode": "original",
+          "showSkeleton": false
+        },
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_file": true
+          },
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        },
+        "Resource Folder": "Users/phili/Documents/ComfyUI-Easy-Install/ComfyUI-Easy-Install/ComfyUI/output"
+      },
+      "widgets_values": [
+        "C:/Users/phili/Documents/ComfyUI-Easy-Install/ComfyUI-Easy-Install/ComfyUI/output/TexturedMesh_00002_.glb",
+        ""
+      ]
+    },
+    {
+      "id": 43,
+      "type": "MarkdownNote",
+      "pos": [
+        2812.7640180006842,
+        634.2003707319277
+      ],
+      "size": [
+        350.4778128772198,
+        126.18932418659585
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "in case the comfyui-geometrypack nodes are erroring for you make sure to delete the \"comfyui-geometrypack\" folder from your ComfyUI/custom_nodes and install missing custom nodes again + restarting\n\nIf for some reason the geometry nodes are then still not working for you, you can then still bypass them with ctrl+b"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 42,
+      "type": "Trellis2SimplifyTrimesh",
+      "pos": [
+        2420.757439463524,
+        432.61183094723737
+      ],
+      "size": [
+        271.8716796875,
+        82
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "trimesh",
+          "type": "TRIMESH",
+          "link": 69
+        }
+      ],
+      "outputs": [
+        {
+          "name": "trimesh",
+          "type": "TRIMESH",
+          "links": [
+            70
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "visualbruno/ComfyUI-Trellis2",
+        "ver": "c1ed55def8dcd8c07529d230b4af73b882d14d99",
+        "Node name for S&R": "Trellis2SimplifyTrimesh",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        200000,
+        "Meshlib"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "Trellis2ExportMesh",
+      "pos": [
+        -804.7121963603004,
+        890.4184885462597
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "trimesh",
+          "type": "TRIMESH",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "glb_path",
+          "type": "STRING",
+          "links": [
+            19
+          ]
+        },
+        {
+          "name": "relative_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "visualbruno/ComfyUI-Trellis2",
+        "ver": "2fd9df85fa1b758d6b9b89cb17ebd82b2e622f70",
+        "Node name for S&R": "Trellis2ExportMesh",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "3D/Trellis2",
+        "glb"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "Trellis2PostProcessMesh",
+      "pos": [
+        -879.656728511124,
+        488.74715809643993
+      ],
+      "size": [
+        410.92578125,
+        298
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mesh",
+          "type": "MESHWITHVOXEL",
+          "link": 57
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mesh",
+          "type": "MESHWITHVOXEL",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "visualbruno/ComfyUI-Trellis2",
+        "ver": "2fd9df85fa1b758d6b9b89cb17ebd82b2e622f70",
+        "Node name for S&R": "Trellis2PostProcessMesh",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        false,
+        0.03,
+        false,
+        false,
+        0.00001,
+        false,
+        0.00001,
+        true,
+        false,
+        0.001,
+        false
+      ]
+    },
+    {
+      "id": 37,
+      "type": "Trellis2MeshWithVoxelMultiViewGenerator",
+      "pos": [
+        -1654.3358533921707,
+        577.5159621217742
+      ],
+      "size": [
+        416.855078125,
+        786
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pipeline",
+          "type": "TRELLIS2PIPELINE",
+          "link": 68
+        },
+        {
+          "name": "front_image",
+          "type": "IMAGE",
+          "link": 44
+        },
+        {
+          "name": "back_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 52
+        },
+        {
+          "name": "left_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 48
+        },
+        {
+          "name": "right_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mesh",
+          "type": "MESHWITHVOXEL",
+          "links": [
+            57
+          ]
+        },
+        {
+          "name": "bvh",
+          "type": "BVH",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "visualbruno/ComfyUI-Trellis2",
+        "ver": "c1ed55def8dcd8c07529d230b4af73b882d14d99",
+        "Node name for S&R": "Trellis2MeshWithVoxelMultiViewGenerator",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        1321737985,
+        "randomize",
+        "1024_cascade",
+        12,
+        6.5,
+        0.05,
+        4,
+        12,
+        6.5,
+        0.05,
+        4,
+        12,
+        3,
+        0.2,
+        3,
+        999999,
+        32,
+        true,
+        0.1,
+        1,
+        0.1,
+        1,
+        0,
+        0.9,
+        true,
+        "z",
+        1,
+        "euler"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "Trellis2LoadModel",
+      "pos": [
+        -1651.819283226663,
+        189.64719485956502
+      ],
+      "size": [
+        283.349609375,
+        154
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "pipeline",
+          "type": "TRELLIS2PIPELINE",
+          "links": [
+            58,
+            68
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "visualbruno/ComfyUI-Trellis2",
+        "ver": "2fd9df85fa1b758d6b9b89cb17ebd82b2e622f70",
+        "Node name for S&R": "Trellis2LoadModel",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "microsoft/TRELLIS.2-4B",
+        "flash_attn",
+        "cuda",
+        true,
+        true
+      ]
+    },
+    {
+      "id": 44,
+      "type": "MarkdownNote",
+      "pos": [
+        -1355.5220995823288,
+        274.31222063853977
+      ],
+      "size": [
+        360.2845526512426,
+        201.69414573983352
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "make sure to click on the modelname and to select the microsoft/Trellis.2-B \n\nin case you encounter following error message: \nRepo id must use alphanumeric chars, '-', '_' or '.'. The name cannot start or end with '-' or '.' and the maximum length is 96: 'E:\\ComfyUI-Easy-Install\\ComfyUI-Easy-Install\\ComfyUI\\models\\microsoft\\TRELLIS.2-4B/ckpts'\n\nHere is the updated script that resolves the issue by downloading all 20 required files directly into ComfyUI\\models\\microsoft\\TRELLIS.2-4B.\nBefore running the script, make sure to delete the existing ComfyUI\\models\\microsoft folder.\nThen run the script from either the ComfyUI root directory or the Add-ons directory.\n\nYou can [download it here](https://drive.google.com/drive/folders/1Mj7pWL3FuF8_eToyV-9cXsByV_XRpdhf?usp=sharing)"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 45,
+      "type": "MarkdownNote",
+      "pos": [
+        -856.6229464569634,
+        332.7819769095888
+      ],
+      "size": [
+        329.81063177856936,
+        88
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "in case you encounter an \"illegal memory\" cuda error or sth similar make sure to run the \"Update Easy-Install.bat and then navigate to \"Add-ons\" --> Tools and execute the **Toggle-DynamicVram.bat\" file "
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    }
+  ],
+  "links": [
+    [
+      1,
+      3,
+      0,
+      1,
+      2,
+      "STRING"
+    ],
+    [
+      2,
+      20,
+      0,
+      2,
+      0,
+      "TRIMESH"
+    ],
+    [
+      3,
+      20,
+      0,
+      3,
+      0,
+      "TRIMESH"
+    ],
+    [
+      6,
+      16,
+      0,
+      6,
+      2,
+      "STRING"
+    ],
+    [
+      8,
+      14,
+      0,
+      8,
+      0,
+      "TRIMESH"
+    ],
+    [
+      9,
+      10,
+      0,
+      9,
+      0,
+      "*"
+    ],
+    [
+      10,
+      21,
+      0,
+      10,
+      0,
+      "MESHWITHVOXEL"
+    ],
+    [
+      18,
+      2,
+      0,
+      17,
+      0,
+      "*"
+    ],
+    [
+      19,
+      23,
+      0,
+      19,
+      2,
+      "STRING"
+    ],
+    [
+      20,
+      25,
+      0,
+      20,
+      0,
+      "ULTRASHAPE_MODEL"
+    ],
+    [
+      22,
+      22,
+      0,
+      20,
+      2,
+      "TRIMESH"
+    ],
+    [
+      24,
+      9,
+      0,
+      22,
+      0,
+      "MESHWITHVOXEL"
+    ],
+    [
+      25,
+      22,
+      0,
+      23,
+      0,
+      "TRIMESH"
+    ],
+    [
+      43,
+      26,
+      0,
+      38,
+      0,
+      "IMAGE"
+    ],
+    [
+      44,
+      38,
+      0,
+      37,
+      1,
+      "IMAGE"
+    ],
+    [
+      47,
+      27,
+      0,
+      39,
+      0,
+      "IMAGE"
+    ],
+    [
+      48,
+      39,
+      0,
+      37,
+      3,
+      "IMAGE"
+    ],
+    [
+      51,
+      28,
+      0,
+      40,
+      0,
+      "IMAGE"
+    ],
+    [
+      52,
+      40,
+      0,
+      37,
+      2,
+      "IMAGE"
+    ],
+    [
+      55,
+      26,
+      2,
+      20,
+      1,
+      "IMAGE"
+    ],
+    [
+      57,
+      37,
+      0,
+      21,
+      0,
+      "MESHWITHVOXEL"
+    ],
+    [
+      58,
+      15,
+      0,
+      41,
+      0,
+      "TRELLIS2PIPELINE"
+    ],
+    [
+      61,
+      38,
+      0,
+      41,
+      1,
+      "IMAGE"
+    ],
+    [
+      62,
+      39,
+      0,
+      41,
+      4,
+      "IMAGE"
+    ],
+    [
+      63,
+      40,
+      0,
+      41,
+      3,
+      "IMAGE"
+    ],
+    [
+      64,
+      8,
+      0,
+      41,
+      2,
+      "TRIMESH"
+    ],
+    [
+      67,
+      41,
+      0,
+      16,
+      0,
+      "TRIMESH"
+    ],
+    [
+      68,
+      15,
+      0,
+      37,
+      0,
+      "TRELLIS2PIPELINE"
+    ],
+    [
+      69,
+      17,
+      0,
+      42,
+      0,
+      "TRIMESH"
+    ],
+    [
+      70,
+      42,
+      0,
+      14,
+      0,
+      "TRIMESH"
+    ],
+    [
+      71,
+      41,
+      1,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      72,
+      41,
+      2,
+      5,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Trellis2_AdvancedSettings",
+      "bounding": [
+        -3008.973502239882,
+        39.251499148593666,
+        3928.329065749621,
+        1624.8649190943947
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Load Image",
+      "bounding": [
+        -4348.369800248021,
+        40.4149200575702,
+        1309.6591121809229,
+        1636.281846245498
+      ],
+      "color": "#b06634",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "Mesh Gen",
+      "bounding": [
+        -1679.3268523134689,
+        103.16147234706187,
+        694.8782769036204,
+        1304.953774072859
+      ],
+      "color": "#A88",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "UltraShapeRefine",
+      "bounding": [
+        938.5604708092048,
+        47.02737354806652,
+        1343.6866963484997,
+        1616.1597357695564
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "Texturing",
+      "bounding": [
+        3308.8463994093054,
+        56.768589887453174,
+        2500.235548701175,
+        1613.9047187935744
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "CleanUpMesh",
+      "bounding": [
+        2319.847768784662,
+        54.6371835536259,
+        957.1173624772332,
+        1604.98486153171
+      ],
+      "color": "#88A",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6303940863129841,
+      "offset": [
+        2893.504180913753,
+        534.5564163228504
+      ]
+    },
+    "workflowRendererVersion": "LG",
+    "frontendVersion": "1.39.19",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "ue_links": [],
+    "links_added_by_ue": []
+  },
+  "version": 0.4
+}
