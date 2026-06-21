@@ -32,22 +32,75 @@ services:
     ports:
       - "8080:8080"
 
-  comfyui:
-    image: mmartial/comfyui-nvidia-docker:ubuntu24_cuda13.0-latest
-    container_name: comfyui
+  comfyui-trellis:
+    build: .
+    container_name: comfyui_trellis2_gguf
     runtime: nvidia
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
-      - USE_UV=true
-      - WANTED_UID=0
-      - WANTED_GID=0
-      - BASE_DIRECTORY=/basedir
+      - HF_HUB_ENABLE_HF_TRANSFER=1
+      - COMFYUI_ENABLE_BLACKWELL_PATCH=1
+      - COMFYUI_SPARSE_CONV_BACKEND=flex_gemm
+      - COMFYUI_RUN_GGUF_INSTALLER=1
+      - COMFYUI_ENABLE_OPTIONAL_ADDONS=1
+      - COMFYUI_ADDON_SAM3=1
+      - COMFYUI_ADDON_SEGVIGEN=1
+      - COMFYUI_ADDON_FAITHC=1
+      - COMFYUI_ADDON_PULSE_MESHAUDIT=1
+      - COMFYUI_ADDON_HYMOTION=1
+      - COMFYUI_ADDON_ULTRASHAPE=1
+      - COMFYUI_ADDON_MEMORY_CLEANUP=1
+      - COMFYUI_ADDON_GEOMETRYPACK=1
+      - COMFYUI_ADDON_RMBG=1
+      - COMFYUI_ADDON_AGSOFT=1
+      - COMFYUI_ADDON_CG_USE_EVERYWHERE=1
+      - COMFYUI_ADDON_COMFY_CUP=1
+      - COMFYUI_ADDON_COMFY_MTB=1
+      - COMFYUI_ADDON_ESSENTIALS=1
+      - COMFYUI_ADDON_ALLOR=1
+      - COMFYUI_ADDON_KJNODES=1
+      - COMFYUI_ADDON_UNLOAD_MODEL=1
+      - COMFYUI_ADDON_RGTHREE=1
+      - COMFYUI_ADDON_WAS_SUITE=1
+      - COMFYUI_ADDON_MAKE_IT_ANIMATABLE=0
+      - COMFYUI_RUN_SEGVIGEN_INSTALLER=1
+      - COMFYUI_AUTO_UPDATE_OPTIONAL_REPOS=0
+      - COMFYUI_FORCE_ADDON_REINSTALL=0
+      - COMFYUI_AUTO_DISABLE_FAILED_ADDONS=1
+      - COMFYUI_ALLOW_ADDON_PIN_OVERRIDES=0
+      - COMFYUI_PROTECTED_PINS=torch,torchvision,torchaudio,numpy,transformers,onnxruntime,onnxruntime-gpu,huggingface-hub,huggingface_hub,triton,flash-attn,flash_attn
       - SECURITY_LEVEL=normal
     volumes:
-      - D:/AI/run:/comfy/mnt
-      - D:/AI/data:/basedir
+      - D:/AI/run:/comfy
+      # ComfyUI storage (específico de este contenedor)
+      - ./storage:/root/ComfyUI/storage
+      # Preflight launcher
+      - ./scripts/preflight_launch.py:/root/ComfyUI/scripts/preflight_launch.py
+      # Custom Nodes (específico de este contenedor)
+      - D:/AI/data/custom_nodes:/root/ComfyUI/custom_nodes
+      # Todos los modelos existentes
+      - D:/AI/data/models:/root/ComfyUI/models
+      # Input / Output compartidos
+      - D:/AI/data/input:/root/ComfyUI/input
+      - D:/AI/data/output:/root/ComfyUI/output
+      # Workflows compartidos
+      - D:/AI/data/user/default/workflows:/root/ComfyUI/user/default/workflows
     ports:
       - "8188:8188"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8188/ > /dev/null || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 120s
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
 
   n8n:
     image: n8nio/n8n:latest
@@ -61,7 +114,7 @@ services:
       - N8N_PORT=5678
       - N8N_PROTOCOL=https
       - N8N_SECURE_COOKIE=false
-      - WEBHOOK_URL=https://hangnail-declared-dime.ngrok-free.dev
+      # - WEBHOOK_URL=https://hangnail-declared-dime.ngrok-free.dev
     volumes:
       - ./n8n_data:/home/node/.n8n
     networks:
